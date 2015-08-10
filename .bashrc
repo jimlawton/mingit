@@ -1,4 +1,12 @@
-source /usr/share/bash-completion/completions/git
+if [ -f /usr/share/bash-completion/completions/git ]; then
+    source /usr/share/bash-completion/completions/git
+elif [ -f /etc/bash_completion.d/git ]; then
+    source /etc/bash_completion.d/git
+else
+    echo "No Git Bash completion!"
+    return
+fi
+
 # custom git completions 
 _git_a ()
 {
