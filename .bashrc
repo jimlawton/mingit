@@ -58,10 +58,14 @@ g()
 			eval git init $@;;
 		m)
 			eval git merge $@;;
-		pll)
+		pl)
 			eval git pull $@;;
-		psh)
+		plr)
+			eval git pull --recurse-submodules=yes $@;;
+		ps)
 			eval git push $@;;
+		psr)
+			eval git push --recurse-submodules=on-demand $@;;
 		s)
 			eval git status $@;;
 		*)
