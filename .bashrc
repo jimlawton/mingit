@@ -3,7 +3,7 @@ if [ -f /usr/share/bash-completion/completions/git ]; then
 elif [ -f /etc/bash_completion.d/git ]; then
     source /etc/bash_completion.d/git
 else
-    echo "No Git Bash completion!"
+    #echo "No Git Bash completion!"
     return
 fi
 
